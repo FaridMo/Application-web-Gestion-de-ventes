@@ -20,20 +20,14 @@
     <?php include('menu.php'); ?>
 
     <div class="container">
-        <!--<div class="panel panel-success margetop">
-            <div class="panel-heading">Rechercher les clients</div>
-            <div class="panel-body">
-                le contenu du panneau
-            </div>
-        </div>-->
         <div class="panel panel-primary marge60 form-disable">
             <div class="panel-heading"> Créer un client </div>
             <div class="panel-body">
                 <form method="post" action="" class="form-block">
                    Nom : 
-                    <input type="text" name=nom class="form-control">
+                    <input type="text" name=nom class="form-control" required>
                     Prenom :
-                    <input type="text" name=prenom class="form-control">
+                    <input type="text" name=prenom class="form-control" required>
                     <input type="submit" name="submit1" value="Enregistrer" class="form-control">
                 </form>
             </div>
