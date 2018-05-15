@@ -10,6 +10,6 @@
     $resultat=mysqli_query($connexion,$req);
     
     $ligne = mysqli
-    header("location:affichage.php");
+    header("location:affichageClient.php");
 
 ?>

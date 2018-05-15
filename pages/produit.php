@@ -22,7 +22,7 @@
     <?php include('menu.php');?>
 
     <div class="container">
-        <div class="panel panel-primary margetop">
+        <div class="panel panel-primary marge60">
             <div class="panel-heading"> Créer un produit </div>
             <div class="panel-body">
                 <form method="post" action="" class="form-block">

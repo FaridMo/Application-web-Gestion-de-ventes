@@ -57,7 +57,7 @@
                     $sql = "update client set nom='$_POST[nomC]',prenom='$_POST[prenomC]' where idclient=$id";
                     mysqli_query($connexion,$sql);
     
-                    header("location:affichage.php");
+                    header("location:affichageClient.php");
             
             }
     ?>
