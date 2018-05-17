@@ -9,7 +9,7 @@
     $req = "update client set nom=$nom,prenom=$prenom where idclient=$id";
     $resultat=mysqli_query($connexion,$req);
     
-    $ligne = mysqli
+    $ligne = mysqli_fetch_assoc($resultat);
     header("location:affichageClient.php");
 
 ?>

@@ -1,0 +1,59 @@
+
+            input{
+                font-family: "Lucida console", sans-serif;
+                
+            }
+            .form-inline input{
+                padding-left: 35px;
+            }
+            
+            label{
+                font-family: "Trebuchet MS", sans-serif;
+            }
+            
+            
+            html {
+                background-image:url("../images/audit.jpg");
+                background-attachment:scroll;
+                background-repeat : no-repeat;
+                background-position: top;
+                background-size:  cover;
+                /*width : 3270px; */   
+            }
+            
+            .username{
+                background-image: url('../images/icons/user.png');
+                background-repeat : no-repeat;
+                background-position:left;
+            }
+            
+            .password{
+                background-image: url('../images/icons/cle2.png');
+                background-repeat : no-repeat;
+                background-position:left;
+                background-size: 30px;
+            }
+
+            #checkbox{
+                color: azure;
+            }
+            
+            #login{
+                border: 2px double transparent;
+                padding: 50px 20px;
+                
+               -webkit-box-shadow: 1px 2px 82px 3px rgba(255,255,255,1);
+                -moz-box-shadow: 1px 2px 82px 3px rgba(255,255,255,1);
+                box-shadow: 1px 2px 82px 3px rgba(255,255,255,1);
+            }
+            
+            .titrelogin{
+                font-size: 20px;
+                color : azure;
+                font-family: "Lucida console";
+            }
+            
+            .img{
+                 width: 200px;
+                margin: auto;
+            }

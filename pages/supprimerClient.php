@@ -6,7 +6,14 @@
 
     $reqSql = "delete from client where idclient = $id";
     
-    mysqli_query($connexion,$reqSql);
+    $resultat = mysqli_query($connexion,$reqSql);
 
-    header('location:affichageClient.php');
+
+    if($resultat){
+        header('location:affichageClient.php');
+    }
+    else{
+            echo "<script> alert('Echec de suppression !')</script>";
+            header('location:affichageClient.php');
+    }
 ?>

@@ -1,4 +1,9 @@
 <?php 
+        session_start(); 
+
+        if(!isset($_SESSION['us'])){
+            header("location:authentification.php");
+        }
         require_once('configuration.php');
 /*PAGINATION <ul class="nav nav-pills"> */
 
@@ -15,8 +20,8 @@
     <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../js/boostrap.js"></script>
 
-    <link href="../css/bootstrap-editable.css" rel="stylesheet">
-    <script src="../js/bootstrap-editable.min.js"></script>
+    <!--<link href="../css/bootstrap-editable.css" rel="stylesheet">
+    <script src="../js/bootstrap-editable.min.js"></script>-->
 
     <style>
         body {
@@ -27,7 +32,17 @@
             font-family: "lucida console", sans-serif;
             font-size: 20px;
         }
-
+        
+        .col-lg-3{
+            position: relative;
+            margin-left: 400px;
+            margin-top:60px;
+        }
+        
+        .bar{
+            position: absolute;
+            text-align: right;
+        }
     </style>
 </head>
 
@@ -36,11 +51,11 @@
 
     <!--########################### AFFICHAGE DES CLIENTS #########################################-->
     <div class="container">
-        <div class="panel panel-success marge60">
+        <div class="panel panel-success marge60 col-lg-3">
             <div class="panel-heading">Rechercher les clients</div>
             <div class="panel-body">
 
-                <form method="get" action="affichageClient.php" class="form-inline">
+                <form method="GET" action="affichageClient.php" class="form-inline">
                     <div class="input-group">
                         <input type="text" name="rechercheClient" placeholder="nom ou prenom" class="form-control">
                         <div class="input-group-btn form-inline">
@@ -98,7 +113,9 @@
 
             </div>
         </div>
-        <div class="panel panel-primary marge60">
+        </div>
+        <div class="container">
+        <div class="panel panel-primary marge20">
             <div class="panel-heading">
                 <center><span class="farid">Liste des clients [<?php echo $tableauCompteur['compteur'] ?> clients]</span></center>
             </div>
@@ -168,10 +185,10 @@
                             echo '<li class="page-item disabled"><a class="page-link" href="">Précèdent</a></li>';
                         }
                         if($page>1){
-                            echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Précèdent</a></li>';
-                        } 
+                            echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Précèdent</a>
+                            </li>'; } 
                         
-                        for($i=1;$i<=$pageNombre;$i++){ ?>
+                                for($i=1;$i<=$pageNombre;$i++){ ?>
 
                                 <li class="page-item <?php if($page==$i) echo " active " ?>">
                                     <a class="page-link" href="affichageClient.php?page=<?php echo $i?>">
@@ -183,18 +200,16 @@
                                 
                                 if($page>=$pageNombre){
                                     echo '<li class="page-item disabled"><a class="page-link" href="">Suivant</a></li>';
-                                    }
-                            
-                                if($page<$pageNombre){
-                                    echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Suivant</a></li>'; 
-                                } ?>
+                                   
+                                }else{
+                                    echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Suivant</a>
+                                </li>';
+                                } 
+                                
+                        /*if($page<$pageNombre)*/
+                        ?>
                                 <!--href="pagination.php?page=<?page/* echo '$page'*/ ?>"-->
                                 
-                                <?php
-                                    
-                                ?>
-                                
-                        
 
                     </ul>
                 </div>

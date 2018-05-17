@@ -1,4 +1,10 @@
 <?php
+        session_start(); 
+
+        if(!isset($_SESSION['us'])){
+            header("location:authentification.php");
+        }
+        
         require_once('configuration.php');
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,3 @@
 <?php
- header('location:pages/affichage.php');
+ header('location:pages/affichageClient.php');
 ?>
