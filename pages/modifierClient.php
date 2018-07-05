@@ -40,7 +40,7 @@
             
         ?>
 
-        <div class="container">
+        <div class="container col-md-4 col-md-offset-4">
             <div class="panel panel-primary marge60 form-disable">
                 <div class="panel-heading"> Modifer les données du client [<?php echo $nom.' '.$prenom ?>] </div>
                 <div class="panel-body">

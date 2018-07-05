@@ -11,7 +11,9 @@
         .far {
             color: darkgreen;
         }
-
+        .navbar-right{
+            margin-left: 520px;
+        }
     </style>
 </head>
 
@@ -34,14 +36,13 @@
                 <li><a href="produit.php">Ajouter un produit</a> </li>
 
 
-                
-                    <form class="navbar-form navbar-right">
-                       <button type="submit" class="btn btn-success">
-                           Se déconnecter
-                       </button>
-                        <!--<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-out far"></span>&nbsp; <strong>Se déconnecter</strong></a></li>-->
-                    </form>
-                
+
+                <form class="navbar-form navbar-right" action="logout.php" method="POST">
+                    <button type="submit" class="btn btn-success">
+                           <span class="glyphicon glyphicon-log-out">
+                           </span> &nbsp; se déconnecter
+                    </button>
+                </form>
             </ul>
         </div>
     </nav>

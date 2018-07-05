@@ -4,8 +4,10 @@
         if(!isset($_SESSION['us'])){
             header("location:authentification.php");
         }
-        require_once('configuration.php');
-/*PAGINATION <ul class="nav nav-pills"> */
+/*require_once('Database.php');
+require_once('clientpoo.php');*/
+
+require_once('configuration.php');
 
 ?>
 <!DOCTYPE html>
@@ -32,17 +34,18 @@
             font-family: "lucida console", sans-serif;
             font-size: 20px;
         }
-        
-        .col-lg-3{
+
+        .col-lg-3 {
             position: relative;
             margin-left: 400px;
-            margin-top:60px;
+            margin-top: 60px;
         }
-        
-        .bar{
+
+        .bar {
             position: absolute;
             text-align: right;
         }
+
     </style>
 </head>
 
@@ -51,7 +54,7 @@
 
     <!--########################### AFFICHAGE DES CLIENTS #########################################-->
     <div class="container">
-        <div class="panel panel-success marge60 col-lg-3">
+        <div class="panel panel-success marge60 col-md-4 col-md-offset-4">
             <div class="panel-heading">Rechercher les clients</div>
             <div class="panel-body">
 
@@ -113,8 +116,8 @@
 
             </div>
         </div>
-        </div>
-        <div class="container">
+    </div>
+    <div class="container">
         <div class="panel panel-primary marge20">
             <div class="panel-heading">
                 <center><span class="farid">Liste des clients [<?php echo $tableauCompteur['compteur'] ?> clients]</span></center>
@@ -141,6 +144,7 @@
                         <?php   
                                     $resultat=mysqli_query($connexion,$sql);
                                         while($ligne=mysqli_fetch_assoc($resultat)){  
+                                
                         ?>
                         <tr>
                             <!--<td>
@@ -186,9 +190,7 @@
                         }
                         if($page>1){
                             echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Précèdent</a>
-                            </li>'; } 
-                        
-                                for($i=1;$i<=$pageNombre;$i++){ ?>
+                            </li>'; } for($i=1;$i<=$pageNombre;$i++){ ?>
 
                                 <li class="page-item <?php if($page==$i) echo " active " ?>">
                                     <a class="page-link" href="affichageClient.php?page=<?php echo $i?>">
@@ -203,13 +205,9 @@
                                    
                                 }else{
                                     echo '<li class="page-item"><a class="page-link" href="affichageClient.php?page=<?php echo $page ?>">Suivant</a>
-                                </li>';
-                                } 
-                                
-                        /*if($page<$pageNombre)*/
-                        ?>
-                                <!--href="pagination.php?page=<?page/* echo '$page'*/ ?>"-->
-                                
+                                </li>'; } /*if($page<$pageNombre)*/ ?>
+                                    <!--href="pagination.php?page=<?page/* echo '$page'*/ ?>"-->
+
 
                     </ul>
                 </div>

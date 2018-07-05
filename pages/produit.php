@@ -27,7 +27,7 @@
 <body>
     <?php include('menu.php');?>
 
-    <div class="container">
+    <div class="container col-md-4 col-md-offset-4">
         <div class="panel panel-primary marge60">
             <div class="panel-heading"> Créer un produit </div>
             <div class="panel-body">
@@ -36,7 +36,8 @@
                     <input type="text" name=libelle class="form-control"> Prix :
                     <input type="text" name=prix class="form-control"> Quantite :
                     <input type="text" name=quantite class="form-control">
-                    <input type="submit" name="submit" value="Enregistrer" class="form-control">
+                    
+                    <center><button type="submit" name="submit" class="btn btn-success marge20"> <span class="glyphicon glyphicon-save"></span> &nbsp; Enregistrer</button></center>
                 </form>
             </div>
         </div>

@@ -2,7 +2,7 @@
         session_start();
    require_once('configuration.php');
     
-    /*if(isset($_POST['boutonconnection'])){*/
+   
         
         $login =isset($_POST['login'])?$_POST['login']:"";
         $pass  =isset($_POST['mdp'])?$_POST['mdp']:"";
@@ -18,11 +18,11 @@
             $_SESSION['us']="faridmo";
             header("location:affichageClient.php");
         }else{
-            header("location:authentification.php");
+            header("location:authentification.php?info=1");
         }
         
 
          
-    /*}*/
+    
 
 ?>

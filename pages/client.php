@@ -6,6 +6,9 @@
         }
         
         require_once('configuration.php');
+        
+        
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +28,7 @@
 <body>
     <?php include('menu.php'); ?>
 
-    <div class="container">
+    <div class="container col-md-4 col-md-offset-4">
         <div class="panel panel-primary marge60 form-disable">
             <div class="panel-heading"> Créer un client </div>
             <div class="panel-body">
@@ -34,19 +37,22 @@
                     <input type="text" name=nom class="form-control" required>
                     Prenom :
                     <input type="text" name=prenom class="form-control" required>
-                    <input type="submit" name="submit1" value="Enregistrer" class="form-control">
+                    <center><button type="submit" name="submit1" class="btn btn-success marge20"> <span class="glyphicon glyphicon-save"></span> &nbsp; Enregistrer</button></center>
                 </form>
             </div>
         </div>
     </div>
     
    <?php 
+             
         
             if(isset($_POST['submit1'])){
                $sql = "INSERT INTO client(nom,prenom) values('$_POST[nom]','$_POST[prenom]')";
                 mysqli_query($connexion,$sql);
+         }
             
-            }
+            
+            
     ?>
 </body>
 

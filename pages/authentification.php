@@ -20,7 +20,7 @@
                 <form id="login" method="POST" action="login.php" class="form">
                   
                   <?php  if(isset($_GET['info'])){
-                                echo "connexion échouée";
+                                echo "<strong><h3>pseudo ou mot de passe incorrect</h3></strong>";
                     }  ?>
                    <center><h1 class="titrelogin">Veuillez vous connecter svp !</h1></center>
                    <img class="img img-responsive img-circle" src="../images/icons/login.gif" alt="login">
